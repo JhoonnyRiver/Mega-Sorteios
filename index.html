@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mega Sorteios</title>
+</head>
+<body>
+    <img src="./ASSETS/mega-sorteio.png" alt="logo-mega-sorteios">
+
+    <h2>Seu Sorteio, Sua Regra, Sua Sorte!</h2>
+    
+    <div id="numeroInputs">
+        <input placeholder="Mínimo" class="input-min" type="number">
+        <input placeholder="Máximo" class="input-max" type="number">
+    </div>
+
+    <button onclick="sortear()">SORTEAR</button>
+
+    <div class="toggle-options">
+        <label class="switch">
+            <input type="checkbox" id="toggleQuantidade" onchange="atualizarCampos()">
+            <span class="slider"></span>
+        </label>
+        <span>Sortear quantidade de números</span>
+    </div>
+
+    <div id="quantidadeInput" style="display: none;">
+        <input placeholder="Quantidade de números" class="input-quantidade" type="number">
+        <textarea placeholder="Digite os números separados por vírgula" class="input-numeros"></textarea>
+    </div>
+
+    <div class="toggle-options">
+        <label class="switch">
+            <input type="checkbox" id="toggleNomes" onchange="atualizarCampos()">
+            <span class="slider"></span>
+        </label>
+        <span>Sortear nomes</span>
+    </div>
+
+    <div id="nomesInput" style="display: none;">
+        <input placeholder="Quantidade de nomes" class="input-quantidade-nomes" type="number">
+        <textarea placeholder="Digite os nomes separados por vírgula" class="input-nomes"></textarea>
+    </div>
+
+    <div id="resultado" class="resultado" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
